@@ -5,25 +5,38 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.List;
 
 public class Question {
 	private BigInteger questionId;
-	private Array questionOptions;
+	private List<String> questionOptions;
 	private String questionTitle;
 	private Integer questionAnswer;
 	private BigDecimal questionMarks;
 	private Integer chosenAnswer;
 	private BigDecimal marksScored;
+	
+	public Question(BigInteger questionId, List<String> questionOptions, String questionTitle, Integer questionAnswer,
+			BigDecimal questionMarks, Integer chosenAnswer, BigDecimal marksScored) {
+		super();
+		this.questionId = questionId;
+		this.questionOptions = questionOptions;
+		this.questionTitle = questionTitle;
+		this.questionAnswer = questionAnswer;
+		this.questionMarks = questionMarks;
+		this.chosenAnswer = chosenAnswer;
+		this.marksScored = marksScored;
+	}
 	public BigInteger getQuestionId() {
 		return questionId;
 	}
 	public void setQuestionId(BigInteger questionId) {
 		this.questionId = questionId;
 	}
-	public Array getQuestionOptions() {
+	public List<String> getQuestionOptions() {
 		return questionOptions;
 	}
-	public void setQuestionOptions(Array questionOptions) {
+	public void setQuestionOptions(List<String> questionOptions) {
 		this.questionOptions = questionOptions;
 	}
 	public String getQuestionTitle() {

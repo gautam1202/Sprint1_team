@@ -1,0 +1,5 @@
+com\capgemini\online_test\exception\AlphabeticException.class
+com\capgemini\online_test\dto\Tests.class
+com\capgemini\online_test\ui\UpdateQuestion.class
+com\capgemini\online_test\exception\MyException.class
+com\capgemini\online_test\exception\PasswordException.class

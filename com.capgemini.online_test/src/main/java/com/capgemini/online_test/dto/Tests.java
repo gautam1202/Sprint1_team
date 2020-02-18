@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Set;
 
-public class Test 
+public class Tests 
 {
 private BigInteger testId;
 private String testTitle;
@@ -17,6 +17,20 @@ private BigDecimal testMarksScored;
 private Question currentQuestion;
 private LocalDateTime startTime;
 private LocalDateTime endTime;
+public Tests(BigInteger testId, String testTitle, LocalTime testDuration, Set<Question> testQuestions,
+		BigDecimal testTotalMarks, BigDecimal testMarksScored, Question currentQuestion, LocalDateTime startTime,
+		LocalDateTime endTime) {
+	super();
+	this.testId = testId;
+	this.testTitle = testTitle;
+	this.testDuration = testDuration;
+	this.testQuestions = testQuestions;
+	this.testTotalMarks = testTotalMarks;
+	this.testMarksScored = testMarksScored;
+	this.currentQuestion = currentQuestion;
+	this.startTime = startTime;
+	this.endTime = endTime;
+}
 public BigInteger getTestId() {
 	return testId;
 }

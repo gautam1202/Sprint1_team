@@ -19,9 +19,9 @@ public User_Rep()
 {
 	
 }
-public void putData(User ob,Test obj)
+public void putData(Long uid,BigInteger tid)
 {
-table.put(ob.getUserId(),obj.getTestId());	
+table.put(uid,tid);	
 }
 }
 
