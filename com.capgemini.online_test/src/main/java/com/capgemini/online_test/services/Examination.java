@@ -49,14 +49,15 @@ public class Examination {
              new AccessingTestRep().puttingQuestion(testId, ques);   
         }
         
-        public BigDecimal getResult(Tests testId)
+        public static BigDecimal getResult(BigInteger testId)
         {
                 
                 return new AccessingTestRep().retrieveMarks(testId);
         }
-        public BigDecimal calculateMarks()
+        public BigDecimal calculateMarks(BigInteger testId)
         {
-                return new BigDecimal(0);
+        	return new AccessingTestRep().getTotalMarks(testId);
+                //return new BigDecimal(0);
         }
         
         public void updateQuestion(BigInteger testId, Question ques)

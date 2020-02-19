@@ -17,7 +17,7 @@ public class AddingTest {
         {   System.out.println("enter test id");
                 BigInteger testID=sc.nextBigInteger();
                  System.out.println("enter Test Title");
-                 String testTitle=sc.nextLine();
+                 String testTitle=sc.next();
                  System.out.println("Enter Test Duration, enter hours then minutes");
                  int hour=sc.nextInt();
                 int minute=sc.nextInt();
@@ -25,14 +25,14 @@ public class AddingTest {
                 BigDecimal totalMarks=sc.nextBigDecimal();
                 BigDecimal testMarksScore=sc.nextBigDecimal();
                 System.out.println("Enter Start time,yyyy-MM-dd HH:mm ");
-                String str = sc.nextLine();
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-                LocalDateTime startTime = LocalDateTime.parse(str, formatter);
+                //String str = sc.next();
+                //DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+                LocalDateTime startTime = LocalDateTime.now();//LocalDateTime.parse(str, formatter);
                 
                 System.out.println("Enter end time,yyyy-MM-dd HH:mm ");
-                str = sc.nextLine();
+                //str = sc.nextLine();
                 
-                LocalDateTime endTime = LocalDateTime.parse(str, formatter);
+                LocalDateTime endTime = LocalDateTime.now();//parse(str, formatter);
                 
                 testobj=new Tests(testID,testTitle,duration, null, totalMarks, testMarksScore, null, startTime, endTime);
         }

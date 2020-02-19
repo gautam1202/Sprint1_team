@@ -33,7 +33,7 @@ public class AccessingTestRep {
         {
                 new Test_Rep().removeData(testId);
         }
-        public BigDecimal retrieveMarks(Tests testId)
+        public BigDecimal retrieveMarks(BigInteger testId)
         {
                 HashMap<BigInteger,Tests> tr=new Test_Rep().gettable();
                 Set<Question> quesSet=tr.get(testId).getTestQuestions();
@@ -109,25 +109,25 @@ public class AccessingTestRep {
             table.putData(test);
         }
         
-        public void getTotalMarks(BigInteger testId)
+        public BigDecimal getTotalMarks(BigInteger testId)
         {
             Test_Rep table=new Test_Rep();
             HashMap <BigInteger,Tests> testTable=table.gettable();
             Tests test= testTable.get(testId);
             Set<Question> questions=test.getTestQuestions();
             Iterator<Question> it=questions.iterator();
+            BigDecimal sum=new BigDecimal(0);
             while(it.hasNext())
             {  Question q=it.next();
                if(q.getQuestionAnswer()==q.getChosenAnswer())
                {
             	   q.setMarksScored(q.getQuestionMarks());
+            	   sum=sum.add(q.getMarksScored());
                }
                else q.setChosenAnswer(0);
             }
             test.setTestQuestions(questions);
             table.putData(test);
-            
-        }
-    
-        	
+            return sum;
+        }  	
         }

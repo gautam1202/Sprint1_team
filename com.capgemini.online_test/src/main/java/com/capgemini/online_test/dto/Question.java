@@ -1,10 +1,7 @@
 package com.capgemini.online_test.dto;
 
-import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.List;
 
 public class Question {
